@@ -1,4 +1,4 @@
-pyton 3
+pyton 3 - Teoria Base
 
 INTEIROS
 converter inteiro para floar (por ex) = float(inteiro)
@@ -181,7 +181,7 @@ main.py
 from arquivos import *	//* para importar tudo que tem em arquivos
 	escrever()	//chama a função escrever
 	ler()		//chama a função ler
-	
+
 
 
 
