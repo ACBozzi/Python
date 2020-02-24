@@ -1,1 +1,188 @@
-python
+pyton 3
+
+INTEIROS
+converter inteiro para floar (por ex) = float(inteiro)
+
+dir (math) = mostrar as op matemáticas do python
+dir (texto) = mostrar as op com texto/string
+help (x.algumaCoisa) = traz a sintaxe de como usar e a função
+python não faz conversão de forma implicita
+-------------------------------------------------------------
+
+LISTA
+lista = [cria, a lista, separada, por, virgulas]
+pode acessar pelo posições, inicia no lista[0]
+lista.append('adiciona um item novo na lista')
+lista.remove(remove um item da lista)
+dir(lista) = mostarr as op de lista no python
+-------------------------------------------------------------
+
+TUPLAS(é uma lista imutável)
+tupla = (criar a tupla)
+percorre por indices tupla(indice)
+dir(tupla)= métodos disponíveis
+-------------------------------------------------------------
+
+DICIONARIO
+dicionario = ['chave1' : 'valor', 'chave2': 'valor']
+dicionario.get('chave1')
+dir(dicionario) = métodos para o dicionario
+-------------------------------------------------------------
+
+PERCORRER LISTA
+
+FOR
+percorrer os dias da semana e imprimir  
+	for dia in dias_da_semana
+		print(dia)
+
+WHILE
+imprimir de 0 a 7
+	while contador < 7
+		print(contador)
+		contador = contador + 1
+-------------------------------------------------------------
+
+COMPREHENSIONS
+	EX:
+		lista = [x for x in range(5)] // preencher uma lista fazendo o for dentro da propria lista
+
+	->any(lista) - para saber se pelo menos algum dos valores da lista é verdadeiro
+	->all(lista) - para saber se todos são verdadeiros
+Usa normalmente para validações
+-------------------------------------------------------------
+
+CONTROLE DE FLUXO
+	condicional (if-else)
+		if idade <20 
+			print('vc é um criança')
+		else
+			print ('vc deve ser jovem')
+		--------------------------------		
+		if idade <20 
+			print('vc é um criança')
+		elif idade <30
+			print ('vc deve é jovem')
+		elif idade < 60
+			print ('vc é adulto')
+-------------------------------------------------------------
+
+FUNÇÕES
+
+dentro de um arquivo funcoes.py(por exemplo)
+def soma(x,y,z=2): //função de soma com dois parâmetros fixos(x,y) e um defaul(z) - pode passar valor que ele pega, senão pega o default
+	print(x+y)
+
+from funcoes import //importar o arquivo funcoes
+
+Parametros dinâmicos
+def funcao_dinamica (*args, **kwargs):
+	print(args) //recebe em forma de tupla
+	print(kwargs) //recebe em forma de dicionario
+-------------------------------------------------------------
+
+CLASSE - paradigma de orientação ao obj
+
+arquivo pessoa.py
+	class Pessoa():
+		def _init_(self, nome, idade): //inicializa nosso 
+			obj, gera ele
+			self.nome = nome
+			self.idade = idade
+
+		def get_nome(self):
+			return self.nome
+
+		def set_nome(self, nome):
+			self.nome = nome
+	
+		def get_idade(self):
+			return self.idade
+
+		def set_idade(self, idade):
+			self.idade = idade
+
+
+main.py 
+from pessoa import Pessoa
+	pessoa =Pessoa ('Anna', 24)
+	pessoa.get_nome()
+	pessoa.get_idade()
+
+	Se colocar nomeado não importa a ordem. por ex:
+	pessoa =Pessoa (idade=24, nome='Anna')
+------------------------------------------------------------
+
+HERANÇA
+
+arquivo pessoa_fisica.py
+from pessoa import Pessoa 
+	class PessoaFisica(Pessoa):	//herdou da classe pessoa	
+		def _init(self, nome, idade, cpf)
+			Pessoa._init(self, nome, idade) //usa o construtor pessoa
+			self.cpf = cpf
+
+		def get_cpf(self):
+			return self.cpf
+
+		def set_cpf(self, cpf):
+			self.cpf = cpf
+
+no main.py
+from pessoa_fisica import PessoaFisica
+	pf= PessoaFisica(nome='Jose', idade = 30, cpf=123456789)
+	pf.get_nome()
+	pf.get_idade()
+	pf.get_cpf()
+------------------------------------------------------------
+
+EXCEPTIONS
+
+from random import randint
+def gerar_numero():
+	x = randint(0,9)
+	y = randint(0,9)
+	print(x/y)
+
+Num dado momento ele vai dar y = 0, portanto vai dar erro, pra isso tratamos a exceção:
+
+from random import randint
+def gerar_numero():
+	x = randint(0,9)
+	y = randint(0,9)
+	try:
+		print(x/y)
+	except ZeroDivisionError:	//msg de erro caso de divis]ao por zero
+		printi('Ocorreu um erro!')
+	finaly:
+		print('fim') //executar sempre no final do bloco independente de erro.
+
+Podemos tratar várias erxceptions
+------------------------------------------------------------
+
+FILES
+
+Criar um arquivo arquivos.py
+
+	def escrever():
+		arquivo = open('file.txt', 'w')	//criar arquivo, w pra write
+		texto = input()	//usuario digita até apertar enter para inserir
+		arquivo.write(textio)
+		arquivo.close()
+
+	def ler():
+		arquivo = open('file.txt', 'r')
+		for linha in arquivo:
+			print (linha)
+		arquivo.close()
+
+main.py
+
+from arquivos import *	//* para importar tudo que tem em arquivos
+	escrever()	//chama a função escrever
+	ler()		//chama a função ler
+	
+
+
+
+
