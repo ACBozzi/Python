@@ -7,7 +7,7 @@ dir (math) = mostrar as op matemáticas do python
 dir (texto) = mostrar as op com texto/string
 help (x.algumaCoisa) = traz a sintaxe de como usar e a função
 python não faz conversão de forma implicita
--------------------------------------------------------------
+---------------------------------------------------------------------------
 
 LISTA
 lista = [cria, a lista, separada, por, virgulas]
@@ -15,19 +15,19 @@ pode acessar pelo posições, inicia no lista[0]
 lista.append('adiciona um item novo na lista')
 lista.remove(remove um item da lista)
 dir(lista) = mostarr as op de lista no python
--------------------------------------------------------------
+--------------------------------------------------------------------------
 
 TUPLAS(é uma lista imutável)
 tupla = (criar a tupla)
 percorre por indices tupla(indice)
 dir(tupla)= métodos disponíveis
--------------------------------------------------------------
+---------------------------------------------------------------------------
 
 DICIONARIO
 dicionario = ['chave1' : 'valor', 'chave2': 'valor']
 dicionario.get('chave1')
 dir(dicionario) = métodos para o dicionario
--------------------------------------------------------------
+--------------------------------------------------------------------------
 
 PERCORRER LISTA
 
@@ -41,7 +41,7 @@ imprimir de 0 a 7
 	while contador < 7
 		print(contador)
 		contador = contador + 1
--------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
 
 COMPREHENSIONS
 	EX:
@@ -50,7 +50,7 @@ COMPREHENSIONS
 	->any(lista) - para saber se pelo menos algum dos valores da lista é verdadeiro
 	->all(lista) - para saber se todos são verdadeiros
 Usa normalmente para validações
--------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------
 
 CONTROLE DE FLUXO
 	condicional (if-else)
@@ -65,7 +65,7 @@ CONTROLE DE FLUXO
 			print ('vc deve é jovem')
 		elif idade < 60
 			print ('vc é adulto')
--------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------
 
 FUNÇÕES
 
@@ -79,7 +79,7 @@ Parametros dinâmicos
 def funcao_dinamica (*args, **kwargs):
 	print(args) //recebe em forma de tupla
 	print(kwargs) //recebe em forma de dicionario
--------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------
 
 CLASSE - paradigma de orientação ao obj
 
@@ -111,7 +111,7 @@ from pessoa import Pessoa
 
 	Se colocar nomeado não importa a ordem. por ex:
 	pessoa =Pessoa (idade=24, nome='Anna')
-------------------------------------------------------------
+-----------------------------------------------------------------------------------
 
 HERANÇA
 
@@ -134,7 +134,7 @@ from pessoa_fisica import PessoaFisica
 	pf.get_nome()
 	pf.get_idade()
 	pf.get_cpf()
-------------------------------------------------------------
+--------------------------------------------------------------------------------------
 
 EXCEPTIONS
 
@@ -158,7 +158,7 @@ def gerar_numero():
 		print('fim') //executar sempre no final do bloco independente de erro.
 
 Podemos tratar várias erxceptions
-------------------------------------------------------------
+-----------------------------------------------------------------------------------------
 
 FILES
 
