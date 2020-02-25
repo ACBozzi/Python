@@ -13,25 +13,27 @@
 	#> 40 	Obesidade Grau III (mórbida)
 
 def calculoIMC(peso,altura):
-	imc = altura * altura
-	imc = peso / imc
-	if imc <16:
-		print('Magreza grave')
-	elif imc <17:
-		print('Magreza moderada')
-	elif imc <18.5:
-		print('Magreza leve')
-	elif imc <25:
-		print('Saudável')
-	elif imc <30:
-		print('Sobrapeso')
-	elif imc <35:
-		print('Obesidade Grau 1')
-	elif imc <40:
-		print('Obesidade Grau 2 (Severa)')
-	elif imc >40:
-		print('Obesidade Grau 3 (Mórbida)')
-	
+	try:
+		imc = peso / (altura*altura)
+		print ('Seu IMC é: ', imc)
+		if imc <16:
+			print('Magreza grave')
+		elif imc <17:
+			print('Magreza moderada')
+		elif imc <18.5:
+			print('Magreza leve')
+		elif imc <25:
+			print('Saudável')
+		elif imc <30:
+			print('Sobrapeso')
+		elif imc <35:
+			print('Obesidade Grau 1')
+		elif imc <40:
+			print('Obesidade Grau 2 (Severa)')
+		elif imc >40:
+			print('Obesidade Grau 3 (Mórbida)')
+	except:
+		print('Valores inválidos')
 
 if __name__ == "__main__":
 	peso = float(input('Digite seu peso (kg): '))
