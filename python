@@ -181,8 +181,11 @@ main.py
 from arquivos import *	//* para importar tudo que tem em arquivos
 	escrever()	//chama a função escrever
 	ler()		//chama a função ler
+----------------------------------------------------------------------------------------------------
 
-
+BUILT-IN
+	Função nativas do python
+--------------------------------------------------------------------------------------------------
 
 
 
