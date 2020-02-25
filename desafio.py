@@ -22,3 +22,60 @@
 #- Certamente, você irá precisar das estruturas condicionais: if, elif e else;
 #- Utilize quantas vezes for necessárias a função print() para fornecer as informações do
 #andamento das tentativas ao jogador. 
+
+import numpy as np
+from random import randint
+
+
+def tentativas(tentativa):
+	if tentativa == 1:
+		return 'primeira'
+	elif tentativa == 2:
+		return 'segunda'
+	elif tentativa == 3:
+		return 'terceira'
+	elif tentativa == 4:
+		return 'quarta'
+	elif tentativa == 5:
+		return 'quinta'
+	elif tentativa == 6:
+		return 'sexta'
+	elif tentativa == 7:
+		return 'sétima'
+	elif tentativa == 8:
+		return 'oitava'
+	elif tentativa == 9:
+		return 'nona'
+	elif tentativa == 10:
+		return 'décima'
+
+def verifica(numero, chute):
+	if chute < numero:
+		print('Você chutou um número menor\n')
+	elif chute > numero: 
+		print('Você chutou um número maior\n')
+	return
+
+
+if __name__ == "__main__":
+	import numpy as np
+
+	tentativa = 1
+	numero = randint(0,50)
+	print(numero)
+	chute = int(input('Digite o número correspondente a sua tentativa:'))
+
+	if chute == numero:
+		print('Você acertou na primeira tentativa, parabéns')
+	else:
+		while chute != numero and tentativa < 10:
+			verifica(numero, chute)
+			print('Você já realizou', tentativa,'tentativa(s)''\n Restam ', (10 - tentativa), 'tentativa(s)' )
+			chute = int(input('\nDigite o próximo chute:'))
+			tentativa = tentativa +1
+
+		if chute == numero:
+			acabou = tentativas(tentativa)
+			print('Parabéns, você acertou na ', acabou, 'tentativa')
+		elif tentativa == 10:
+			print('Acabou suas tentativas, o numero é ', numero)
