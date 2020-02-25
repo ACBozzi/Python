@@ -7,27 +7,36 @@ dir (math) = mostrar as op matemáticas do python
 dir (texto) = mostrar as op com texto/string
 help (x.algumaCoisa) = traz a sintaxe de como usar e a função
 python não faz conversão de forma implicita
+x**2= x elevado ao quadrado(import numpy as np)
 ---------------------------------------------------------------------------
 
-LISTA
-lista = [cria, a lista, separada, por, virgulas]
-pode acessar pelo posições, inicia no lista[0]
-lista.append('adiciona um item novo na lista')
-lista.remove(remove um item da lista)
-dir(lista) = mostarr as op de lista no python
---------------------------------------------------------------------------
+LISTAS []
+	lista = [cria, a lista, separada, por, virgulas]
+	lista[0:2] = pega os elementos 0 e 1
+	len(lista) = qtd de elementos da lista
+	del lista[indice] =deleta o atributo do indice
+	pode acessar pelo posições, inicia no lista[0]
+	lista.append('adiciona um item novo na lista')
+	lista.remove(elemento a ser removido)
+	dir(lista) = mostarr as op de lista no python
+	função do tipo list()
 
-TUPLAS(é uma lista imutável)
-tupla = (criar a tupla)
-percorre por indices tupla(indice)
-dir(tupla)= métodos disponíveis
----------------------------------------------------------------------------
+ANINHAMENTO DE LISTAS:
+	LISTA = [[1,2,3], [4,5,6],[7,8,9]]
+	pegar o 2 por exemplo = lista [0][1] //elemento da principal seguida do outro da lista
 
-DICIONARIO
-dicionario = ['chave1' : 'valor', 'chave2': 'valor']
-dicionario.get('chave1')
-dir(dicionario) = métodos para o dicionario
---------------------------------------------------------------------------
+	Soma de duas listas = L1+L2(concatena as listas)
+	20 in lista = verifica se o elemento esta contido na lista
+	lista.TAB (lista as operações para fazer na lista)
+	lista.cont(5) = quantos elementos 5 tem na minha lista
+	lista.index(5) = o indice no 5 na lista
+	lista.insert(4, 0) = adicionar no indice 4 o valor zero
+	lista.sort() = ordenar a lista do menor para o menor
+	lista.reverse() = ordena do maior para o menor
+	lista1 =  lista = agora lista tbm é lista 1, se mudar lista 1 muda lista 
+
+	lista_nova = lista[:] : Cópia de lista
+	lista_nova = lista.copy()
 
 PERCORRER LISTA
 
@@ -41,7 +50,59 @@ imprimir de 0 a 7
 	while contador < 7
 		print(contador)
 		contador = contador + 1
+
+
+--------------------------------------------------------------------------
+
+TUPLAS(é uma lista imutável) ()
+tupla = (criar a tupla), não obrigatorio criar com os parenteses
+percorre por indices tupla(indice)
+dir("tuple")= métodos disponíveis
+tupla.TAB = operações com a tupla
+tupla.cout(x) = quantos x tem na tupla
+lista = list(tupla) transforma a tupla em lista
+vale todas aas operações de lista
+tupla = tuple(lista) retransforma em tupla
+
+
+---------------------------------------------------------------------------
+
+DICIONARIO {}
+	Não são ordenados. Com graus de associação
+	dicionario = {'Pedro' : 'salário', 'chave2': 'valor'}
+	dicionario.get('chave1')
+	dir("dict") = métodos para o dicionario
+	dicionario.TAB
+	dicionario.keys = obtem as chaves
+	dicionario.values = obtem os valores
+	dicionario.update(elemento) = adicionou elemento ao dicionario
+	del dicionario[elemento] = remove o elemento e a chave
+	dicionario.clear = dicionario vazio
+	adicionar novos valores dicionario['exemplo'] = falso
+
+Dicionários aninhados
+	Uma chave pode ter um dicionario
+
 ------------------------------------------------------------------------------------------------------------
+
+VETORES/ARRAYS
+	import numpy as np
+	np.TAB = operações com análises numericas	
+		|->	np.array
+	Armazena apenas um tipo de dado(int,str,float)
+	vetor = np.array([]) criar um vetor
+	vetor = np.array(lista) = transforma uma lista em um vetor
+	type(vetor[indice]) = tipo do elemento de indice indice 
+---------------------------------------------------------------------------------------------------------
+
+MATRIZES
+	Vetores multidimensionais
+	matriz = np.array([[1,2,3],[4,5,6],[7,8,9]]) - lista aninhada, só que não
+	type(matriz)
+	matriz[1,2] = acessar linha coluna
+	matriz[:,2] pega a coluna dois inteira
+
+----------------------------------------------------------------------------------------------------------
 
 COMPREHENSIONS
 	EX:
@@ -65,6 +126,13 @@ CONTROLE DE FLUXO
 			print ('vc deve é jovem')
 		elif idade < 60
 			print ('vc é adulto')
+
+	for i in range(5,11)
+		imprime do 5 ao 10 // o 11 não é inclusivo
+
+	for i in range(0,20,2)
+		imprime do zero ao 19 porem de dois em dois, 0 2 4.. 
+
 --------------------------------------------------------------------------------------------------------------------
 
 FUNÇÕES
@@ -187,5 +255,24 @@ BUILT-IN
 	Função nativas do python
 --------------------------------------------------------------------------------------------------
 
+-MATPLOTLIB
+	gera tando 3d quando 2d - olhar documentação
 
+import matplotlib.pyplot as plt
+import numpy as np
 
+	x = np.linspace(0,2,100) - gera valores de 0 a 2 com um total de 100 valores por exemplo
+	y = 2*x
+	plt.plot(x,y,'+g') plotar um gráfico GREEN
+	plt.show - limpar o grafico
+	plt.xlabel('COLOCANDO LEGENDA')
+	plt.llabel('LEGENDA')
+	plt.title('TITULO')
+
+Plotar um do lado do outro
+	fig, janela = plt.subplots(3,2) - gera dois graficos na coluna  por 3 na linha
+	janela[0,0].plot(x1,y1,'.')  -passar os pontos previamente definidos
+	janela[0,1].plot(x1,y1,'.')  -passar os pontos previamente definidos
+	.colocar todos os graficos definidos em fig, janela = plt.subplots(3,2)	
+	.
+	.
