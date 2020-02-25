@@ -14,11 +14,11 @@ def resolve_equacao(a,b,c):
 	if delta < 0:
 		print('A equação não possui raízes reais')
 	elif delta ==  0:
-		raiz_unica =(-b)/(2*a)
+		raiz_unica =(-1*b)/(2*a)
 		print('Delta igual a 0, portanto a única raiz real é ', raiz_unica)
 	elif delta > 0:
-		raiz1 = ((-b) + math.sqrt(delta)) / (2*a)
-		raiz2 = ((-b) - math.sqrt(delta)) / (2*a)
+		raiz1 = ((-1*b) + math.sqrt(delta)) / (2*a)
+		raiz2 = ((-1*b) - math.sqrt(delta)) / (2*a)
 		print('A equação possui duas raízes reaias que são ',raiz1, 'e', raiz2)
 
 if __name__ == "__main__":
